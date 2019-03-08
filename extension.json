@@ -11,6 +11,14 @@
         "name": "TinyMCE Cloud API Key",
         "description": "",
         "required": true
+      },
+      {
+        "id": "channel",
+        "type": "Symbol",
+        "name": "TinyMCE Cloud 'channel' to use",
+        "description": "",
+        "required": false,
+        "default": 5
       }
     ],
     "instance": [
