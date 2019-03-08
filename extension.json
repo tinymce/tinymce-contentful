@@ -18,7 +18,7 @@
         "name": "TinyMCE Cloud 'channel' to use",
         "description": "",
         "required": false,
-        "default": 5
+        "default": "5"
       }
     ],
     "instance": [
