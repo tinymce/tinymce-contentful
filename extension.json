@@ -1,7 +1,7 @@
 {
   "id": "TinyMCE",
   "name": "TinyMCE",
-  "src": "https://contentful.staging.tiny.cloud/",
+  "src": "https://contentful.tiny.cloud/",
   "fieldTypes": ["Text"],
   "parameters": {
     "installation": [
@@ -19,7 +19,7 @@
         "type": "Symbol",
         "name": "Plugins",
         "description": "Space-separated list of TinyMCE plugins to enable",
-        "default": "a11ychecker linkchecker media mediaembed powerpaste tinymcespellchecker",
+        "default": "autoresize a11ychecker linkchecker media mediaembed powerpaste tinymcespellchecker",
         "required": false
       }
     ]
