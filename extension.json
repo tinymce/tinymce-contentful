@@ -1,7 +1,7 @@
 {
   "id": "TinyMCE",
   "name": "TinyMCE",
-  "src": "https://contentful.tiny.cloud/",
+  "src": "https://contentful.staging.tiny.cloud/",
   "fieldTypes": ["Text"],
   "parameters": {
     "installation": [
@@ -10,7 +10,7 @@
         "type": "Symbol",
         "name": "TinyMCE Cloud API Key",
         "description": "",
-        "required": "true"
+        "required": true
       }
     ],
     "instance": [
@@ -20,7 +20,7 @@
         "name": "Plugins",
         "description": "Space-separated list of TinyMCE plugins to enable",
         "default": "a11ychecker linkchecker media mediaembed powerpaste tinymcespellchecker",
-        "required": "false"
+        "required": false
       }
     ]
   }
