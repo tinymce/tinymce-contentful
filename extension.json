@@ -17,7 +17,7 @@
         "type": "Symbol",
         "name": "TinyMCE Cloud 'channel' to use",
         "description": "",
-        "required": false,
+        "required": true,
         "default": "5"
       }
     ],
