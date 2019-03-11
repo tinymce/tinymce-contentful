@@ -26,9 +26,33 @@
         "id": "plugins",
         "type": "Symbol",
         "name": "Plugins",
-        "description": "Space-separated list of TinyMCE plugins to enable",
-        "default": "autoresize a11ychecker linkchecker media mediaembed powerpaste tinymcespellchecker",
+        "description": "Space-separated list of TinyMCE plugins to enable. See https://www.tiny.cloud/docs/plugins/ for more information on plugins.",
+        "default": "autoresize a11ychecker linkchecker media mediaembed powerpaste tinymcespellchecker advcode",
         "required": false
+      },
+      {
+        "id": "showToolbar",
+        "type": "Boolean",
+        "name": "Show Toolbar",
+        "description": "Show the toolbar?",
+        "required": true,
+        "default": true
+      },
+      {
+        "id": "toolbar",
+        "type": "Symbol",
+        "name": "Toolbar",
+        "description": "Specify your toolbar controls here. See https://www.tiny.cloud/docs/configure/editor-appearance/#toolbar",
+        "default": "undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | code",
+        "required": false
+      },
+      {
+        "id": "showMenubar",
+        "type": "Boolean",
+        "name": "Show Menubar",
+        "description": "Show the menubar?",
+        "required": true,
+        "default": true
       }
     ]
   }
