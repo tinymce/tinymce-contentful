@@ -31,28 +31,20 @@
         "required": false
       },
       {
-        "id": "showToolbar",
-        "type": "Boolean",
-        "name": "Show Toolbar",
-        "description": "Show the toolbar?",
-        "required": true,
-        "default": true
-      },
-      {
         "id": "toolbar",
         "type": "Symbol",
         "name": "Toolbar",
-        "description": "Specify your toolbar controls here. See https://www.tiny.cloud/docs/configure/editor-appearance/#toolbar",
+        "description": "Specify your toolbar configuration here. To use the default toolbar, clear this field. To hide the toolbar, enter the value 'false'. See https://www.tiny.cloud/docs/configure/editor-appearance/#toolbar",
         "default": "undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | code",
         "required": false
       },
       {
-        "id": "showMenubar",
-        "type": "Boolean",
-        "name": "Show Menubar",
-        "description": "Show the menubar?",
-        "required": true,
-        "default": true
+        "id": "menubar",
+        "type": "Symbol",
+        "name": "Menubar",
+        "description": "Specify the menus to display here. To use the default menu bar, clear this field. To hide the menu, enter the value 'false'. See https://www.tiny.cloud/docs/configure/editor-appearance/#menubar",
+        "required": false,
+        "default": "edit view insert format"
       }
     ]
   }
