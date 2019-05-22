@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>TinyMCE</title>
+    <script src="https://unpkg.com/contentful-ui-extensions-sdk@3"></script>
+    <script src="https://unpkg.com/lodash@4.17.11"></script>
+
+    <style type="text/css">
+      .tox-dialog {
+        /* The advcode dialog was too tall and being clipped */
+        max-height: calc(100% - 5px) !important;
+      }
+      body {
+        border: 1px;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      div#editor {
+        width:100%;min-height:250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="editor"></div>
+    <script src="./tinymce-for-contentful.js"></script>
+  </body>
+</html>
