@@ -27,7 +27,7 @@
         "type": "Symbol",
         "name": "Plugins",
         "description": "Space-separated list of TinyMCE plugins to enable. See https://www.tiny.cloud/docs/plugins/ for more information on plugins.",
-        "default": "autoresize textpattern lists advlist a11ychecker linkchecker media mediaembed powerpaste tinymcespellchecker advcode",
+        "default": "autoresize textpattern lists advlist a11ychecker linkchecker media mediaembed powerpaste tinymcespellchecker advcode image",
         "required": false
       },
       {
