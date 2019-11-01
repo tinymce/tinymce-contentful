@@ -25,6 +25,7 @@ window.contentfulExtension.init(function(api) {
       min_height: 300,
       autoresize_bottom_margin: 15,
       resize: false,
+      image_caption: true,
       init_instance_callback : function(editor) {
         var listening = true;
 
