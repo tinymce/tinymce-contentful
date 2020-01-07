@@ -10,14 +10,15 @@
         "type": "Symbol",
         "name": "TinyMCE Cloud API Key",
         "description": "",
-        "required": true
+        "required": false,
+        "default": "please-specify-your-key"
       },
       {
         "id": "channel",
         "type": "Symbol",
         "name": "TinyMCE Cloud 'channel' to use",
         "description": "",
-        "required": true,
+        "required": false,
         "default": "5"
       }
     ],
