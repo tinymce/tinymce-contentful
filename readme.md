@@ -11,7 +11,7 @@ for an introduction to TinyMCE for Contentful.
 This is packaged as Contentful UI Extension. The `extension.json` file defines
 the extension and points it to an external web server to serve the extension's files.
 
-The files in `src/` are deployed to:
+In Tiny's case, the files in `src/` are deployed to:
  - https://contentful.tiny.cloud/ (production)
  - https://contentful-staging.tiny.cloud/ (staging)
 
@@ -20,12 +20,12 @@ The files in `src/` are deployed to:
 Note that this extension only works when installed using the "src" method, 
 not the "srcdoc" method. As such, if you wish to fork this extension, you 
 will need to host the files in the `src/` folder on a web server and update
-your extension.json file to point to it.
+your `extension.json` file to point to it.
 
 # Developing
 
 To deploy experimental changes to the `extension.json` file, you can use 
-the contentful cli: 
+the contentful CLI: 
 
     contentful extension update --version=X
 
