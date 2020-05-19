@@ -2,10 +2,7 @@
   "id": "TinyMCE (v3)",
   "name": "TinyMCE (v3)",
   "src": "https://contentful.tiny.cloud/",
-  "fieldTypes": [
-    "Text",
-    "RichText"
-  ],
+  "fieldTypes": ["Text"],
   "parameters": {
     "installation": [
       {
@@ -54,7 +51,7 @@
           "id": "height",
           "name": "Height",
           "type": "Symbol",
-          "default": "800",
+          "default": "300",
           "required": false,
           "description": "Sets the height of the entire editor, including the menu bar, toolbars, and status bar. See https://www.tiny.cloud/docs/configure/editor-appearance/#height."
       }
