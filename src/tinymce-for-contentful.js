@@ -13,16 +13,19 @@ window.contentfulExtension.init(function(api) {
       }
     }
 
+    var p = tweak(api.parameters.instance.plugins);
     var tb = tweak(api.parameters.instance.toolbar);
     var mb = tweak(api.parameters.instance.menubar);
+    var h = tweak(api.parameters.instance.height) || "300";
 
     tinymce.init({
       selector: "#editor",
-      plugins: api.parameters.instance.plugins,
+      plugins: p,
       toolbar: tb,
       menubar: mb,
-      max_height: 500,
+      height: h,
       min_height: 300,
+      max_height: 800,
       autoresize_bottom_margin: 15,
       resize: false,
       image_caption: true,

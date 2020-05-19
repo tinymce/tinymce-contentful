@@ -1,8 +1,11 @@
 {
-  "id": "TinyMCE",
-  "name": "TinyMCE",
+  "id": "TinyMCE (v3)",
+  "name": "TinyMCE (v3)",
   "src": "https://contentful.tiny.cloud/",
-  "fieldTypes": ["Text"],
+  "fieldTypes": [
+    "Text",
+    "RichText"
+  ],
   "parameters": {
     "installation": [
       {
@@ -24,28 +27,36 @@
     ],
     "instance": [
       {
-        "id": "plugins",
-        "type": "Symbol",
-        "name": "Plugins",
-        "description": "Space-separated list of TinyMCE plugins to enable. See https://www.tiny.cloud/docs/plugins/ for more information on plugins.",
-        "default": "autoresize textpattern lists advlist a11ychecker linkchecker media mediaembed powerpaste tinymcespellchecker advcode image",
-        "required": false
+          "id": "plugins",
+          "name": "Plugins",
+          "type": "Symbol",
+          "default": "autoresize textpattern lists advlist a11ychecker linkchecker media mediaembed powerpaste tinymcespellchecker advcode image",
+          "required": false,
+          "description": "Space separated list of TinyMCE plugins to enable. See https://www.tiny.cloud/docs/plugins/ for more information on plugins."
       },
       {
-        "id": "toolbar",
-        "type": "Symbol",
-        "name": "Toolbar",
-        "description": "Specify your toolbar configuration here. To use the default toolbar, clear this field. To hide the toolbar, enter the value 'false'. See https://www.tiny.cloud/docs/configure/editor-appearance/#toolbar",
-        "default": "undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | code",
-        "required": false
+          "id": "toolbar",
+          "name": "Toolbar",
+          "type": "Symbol",
+          "default": "undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | numlist bullist outdent intent | code",
+          "required": false,
+          "description": "Specify your toolbar configuration here. To use the default toolbar, clear this field. To hide the toolbar, enter the value 'false'. See https://www.tiny.cloud/docs/configure/editor-appearance/#"
       },
       {
-        "id": "menubar",
-        "type": "Symbol",
-        "name": "Menubar",
-        "description": "Specify the menus to display here. To use the default menu bar, clear this field. To hide the menu, enter the value 'false'. See https://www.tiny.cloud/docs/configure/editor-appearance/#menubar",
-        "required": false,
-        "default": "edit view insert format"
+          "id": "menubar",
+          "name": "Menubar",
+          "type": "Symbol",
+          "default": "edit view insert format",
+          "required": false,
+          "description": "Specify the menus to display here. To use the default menu bar, clear this field. To hide the menu, enter the value 'false'. See https://www.tiny.cloud/docs/configure/editor-appearance/#menubar"
+      },
+      {
+          "id": "height",
+          "name": "Height",
+          "type": "Symbol",
+          "default": "800",
+          "required": false,
+          "description": "Sets the height of the entire editor, including the menu bar, toolbars, and status bar. See https://www.tiny.cloud/docs/configure/editor-appearance/#height."
       }
     ]
   }
