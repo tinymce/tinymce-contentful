@@ -13,8 +13,7 @@ window.contentfulExtension.init(function(api) {
 
     var p = tweak(api.parameters.instance.plugins);
     var tb = tweak(api.parameters.instance.toolbar);
-    var mb = tweak(api.parameters.instance.menubar);
-    var h = tweak(api.parameters.instance.height || "300px");
+    var mb = tweak(api.parameters.instance.menubar);  
 
     api.window.startAutoResizer();
 
@@ -23,8 +22,8 @@ window.contentfulExtension.init(function(api) {
       plugins: p,
       toolbar: tb,
       menubar: mb,
-      height: h,
-      min_height: 300,
+      min_height: 800,
+      max_height: 950,
       autoresize_bottom_margin: 15,
       resize: false,
       image_caption: true,
