@@ -29,7 +29,7 @@ the contentful CLI:
 
     contentful extension update --version=X
 
-where X is the previous version of the extension installed.
+Where X is the previous version of the extension installed.
 This only affects your own Contentful instance.
 
 To make changes to the files in `src/`, re-deploy them to the appropriate web server. 
