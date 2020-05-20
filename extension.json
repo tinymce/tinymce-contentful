@@ -1,6 +1,6 @@
 {
-  "id": "TinyMCE (v3)",
-  "name": "TinyMCE (v3)",
+  "id": "TinyMCE (v2)",
+  "name": "TinyMCE (v2)",
   "src": "https://contentful.tiny.cloud/",
   "fieldTypes": ["Text"],
   "parameters": {
@@ -46,14 +46,6 @@
           "default": "edit view insert format",
           "required": false,
           "description": "Specify the menus to display here. To use the default menu bar, clear this field. To hide the menu, enter the value 'false'. See https://www.tiny.cloud/docs/configure/editor-appearance/#menubar"
-      },
-      {
-          "id": "height",
-          "name": "Height",
-          "type": "Symbol",
-          "default": "300px",
-          "required": false,
-          "description": "Sets the height of the entire editor, including the menu bar, toolbars, and status bar. See https://www.tiny.cloud/docs/configure/editor-appearance/#height."
       }
     ]
   }
