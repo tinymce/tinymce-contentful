@@ -1,7 +1,5 @@
 window.contentfulExtension.init(function(api) {
   function tinymceForContentful(api) {
-    api.window.startAutoResizer();
-
     function tweak(param) {
       var t = param.trim();
       if (t === "false") {
@@ -15,17 +13,17 @@ window.contentfulExtension.init(function(api) {
 
     var p = tweak(api.parameters.instance.plugins);
     var tb = tweak(api.parameters.instance.toolbar);
-    var mb = tweak(api.parameters.instance.menubar);
-    var h = tweak(api.parameters.instance.height) || "300";
+    var mb = tweak(api.parameters.instance.menubar);  
+
+    api.window.startAutoResizer();
 
     tinymce.init({
       selector: "#editor",
       plugins: p,
       toolbar: tb,
       menubar: mb,
-      height: h,
-      min_height: 300,
-      max_height: 800,
+      min_height: 600,
+      max_height: 750,
       autoresize_bottom_margin: 15,
       resize: false,
       image_caption: true,
