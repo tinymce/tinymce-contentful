@@ -51,7 +51,16 @@ window.contentfulExtension.init(function (api) {
         '.body-large { font-size: 1rem; font-weight: 500; }' +
         '.body-medium { font-size: 1rem; font-weight: 400; }' +
         '.body-small { font-size: 0.75rem; font-weight: 400; }' +
-        '.editorial { font-size: 1.25rem; font-weight: 400; }',
+        '.editorial { font-size: 1.25rem; font-weight: 400; }' +
+        '.cta-large { font-size: 1.25rem; font-weight: 500; }' +
+        '.cta-medium { font-size: 1rem; font-weight: 500; }' +
+        '.cta-small { font-size: 0.75rem; font-weight: 500; }',
+      link_class_list: [
+        { title: 'Inline', value: '' },
+        { title: 'Large CTA', value: 'cta-large' },
+        { title: 'Medium CTA', value: 'cta-medium' },
+        { title: 'Small CTA', value: 'cta-small' },
+      ],
       init_instance_callback: function (editor) {
         var listening = true;
 
