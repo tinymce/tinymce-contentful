@@ -1,10 +1,10 @@
-window.contentfulExtension.init(function(api) {
+window.contentfulExtension.init(function (api) {
   function tinymceForContentful(api) {
     function tweak(param) {
       var t = param.trim();
-      if (t === "false") {
+      if (t === 'false') {
         return false;
-      } else if (t === "") {
+      } else if (t === '') {
         return undefined;
       } else {
         return t;
@@ -13,12 +13,12 @@ window.contentfulExtension.init(function(api) {
 
     var p = tweak(api.parameters.instance.plugins);
     var tb = tweak(api.parameters.instance.toolbar);
-    var mb = tweak(api.parameters.instance.menubar);  
+    var mb = tweak(api.parameters.instance.menubar);
 
     api.window.startAutoResizer();
 
     tinymce.init({
-      selector: "#editor",
+      selector: '#editor',
       plugins: p,
       toolbar: tb,
       menubar: mb,
@@ -27,7 +27,32 @@ window.contentfulExtension.init(function(api) {
       autoresize_bottom_margin: 15,
       resize: false,
       image_caption: true,
-      init_instance_callback : function(editor) {
+      style_formats: [
+        { title: 'Large Heading', block: 'h1', attributes: { class: '' } },
+        { title: 'Medium Heading', block: 'h2', attributes: { class: '' } },
+        { title: 'Small Heading', block: 'h3', attributes: { class: '' } },
+        { title: 'Editorial', block: 'p', attributes: { class: 'editorial' } },
+        {
+          title: 'Large Body',
+          block: 'p',
+          attributes: { class: 'body-large' },
+        },
+        { title: 'Medium Body', block: 'p', attributes: { class: '' } },
+        {
+          title: 'Small Body',
+          block: 'p',
+          attributes: { class: 'body-small' },
+        },
+      ],
+      content_style:
+        'h1 { font-size: 1.5rem; font-weight: 400; }' +
+        'h2 { font-size: 1.25rem; font-weight: 500; }' +
+        'h3 { font-size: 1rem; font-weight: 500; }' +
+        '.body-large { font-size: 1rem; font-weight: 500; }' +
+        '.body-medium { font-size: 1rem; font-weight: 400; }' +
+        '.body-small { font-size: 0.75rem; font-weight: 400; }' +
+        '.editorial { font-size: 1.25rem; font-weight: 400; }',
+      init_instance_callback: function (editor) {
         var listening = true;
 
         function getEditorContent() {
@@ -49,7 +74,7 @@ window.contentfulExtension.init(function(api) {
 
         setContent(api.field.getValue());
 
-        api.field.onValueChanged(function(x) {
+        api.field.onValueChanged(function (x) {
           if (listening) {
             setContent(x);
           }
@@ -62,18 +87,21 @@ window.contentfulExtension.init(function(api) {
           if (editorContent !== apiContent) {
             //console.log('Setting content in api to: [' + editorContent + ']');
             listening = false;
-            api.field.setValue(editorContent).then(function() {
-              listening = true;
-            }).catch(function(err) {
-              console.log("Error setting content", err);
-              listening = true;
-            });
+            api.field
+              .setValue(editorContent)
+              .then(function () {
+                listening = true;
+              })
+              .catch(function (err) {
+                console.log('Error setting content', err);
+                listening = true;
+              });
           }
         }
 
-        var throttled = _.throttle(onEditorChange, 500, {leading: true});
+        var throttled = _.throttle(onEditorChange, 500, { leading: true });
         editor.on('change keyup setcontent blur', throttled);
-      }
+      },
     });
   }
 
@@ -84,12 +112,20 @@ window.contentfulExtension.init(function(api) {
     document.body.appendChild(script);
   }
 
-  var sub = location.host == "contentful.staging.tiny.cloud" ? "cdn.staging" : "cdn";
+  var sub =
+    location.host == 'contentful.staging.tiny.cloud' ? 'cdn.staging' : 'cdn';
   var apiKey = api.parameters.installation.apiKey;
   var channel = api.parameters.installation.channel;
-  var tinymceUrl = "https://" + sub + ".tiny.cloud/1/" + apiKey + "/tinymce/" + channel + "/tinymce.min.js";
+  var tinymceUrl =
+    'https://' +
+    sub +
+    '.tiny.cloud/1/' +
+    apiKey +
+    '/tinymce/' +
+    channel +
+    '/tinymce.min.js';
 
-  loadScript(tinymceUrl, function() {
+  loadScript(tinymceUrl, function () {
     tinymceForContentful(api);
   });
 });
