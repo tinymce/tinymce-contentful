@@ -35,7 +35,7 @@
           "id": "toolbar",
           "name": "Toolbar",
           "type": "Symbol",
-          "default": "undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | numlist bullist outdent intent | code",
+          "default": "undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | numlist bullist outdent intent | code | image",
           "required": false,
           "description": "Specify your toolbar configuration here. To use the default toolbar, clear this field. To hide the toolbar, enter the value 'false'. See https://www.tiny.cloud/docs/configure/editor-appearance/#"
       },
