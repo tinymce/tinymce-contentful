@@ -35,7 +35,7 @@ window.contentfulExtension.init(function (api) {
         {
           title: 'Large Body',
           block: 'p',
-          attributes: { class: 'body-large' },
+          attributes: { class: 'ds-body-large' },
         },
         { title: 'Medium Body', block: 'p', attributes: { class: '' } },
         {
@@ -48,6 +48,7 @@ window.contentfulExtension.init(function (api) {
         'h1 { font-size: 1.5rem; font-weight: 400; }' +
         'h2 { font-size: 1.25rem; font-weight: 500; }' +
         'h3 { font-size: 1rem; font-weight: 500; }' +
+        '.ds-body-large { font-size: 1.5rem; font-weight: 500; }' +
         '.body-large { font-size: 1rem; font-weight: 500; }' +
         '.body-medium { font-size: 1rem; font-weight: 400; }' +
         '.body-small { font-size: 0.75rem; font-weight: 400; }' +
